@@ -1,0 +1,6 @@
+pytest==4.6
+pytest-bdd==4.0.1
+py==1.9.0
+pluggy==0.13.1
+pytest-fixtures==0.1.0
+
