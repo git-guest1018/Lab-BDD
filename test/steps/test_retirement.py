@@ -15,7 +15,6 @@ CONVERTERS = {
     'retire_month': int,
     'retire_year': int
 }
-scenarios('../features/calculateRetirement.feature', example_converters=CONVERTERS)
 
 @given(parsers.cfparse('the user wants to know date to start receiving full SSA benefits', extra_types=EXTRA_TYPES))
 @given('the user wants to know date to start receiving full SSA benefits')
@@ -35,6 +34,8 @@ def calculate_full_date(birth_year, retire_years, retire_months):
     calc_age = calculate_retirement_age(birth_year)
     assert calc_age[0].__eq__(retire_years)
     assert calc_age[1].__eq__(retire_months)
+
+
 
 @given("the user enters invalid info")
 def step_impl():
