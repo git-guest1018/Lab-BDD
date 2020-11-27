@@ -6,7 +6,8 @@ Feature: Full Retirement Age Calculator
   As a user i want to know what when my retirement date
   is based on my birth date
 
-  Scenario Outline: Calculate the retirement year and month
+
+   Scenario Outline: Calculate the retirement year and month
     Given the user wants to know date to start receiving full SSA benefits
     When "<birth_year>" year is entered
     Then the program will use "<birth_year>" so retirement age will be in "<retire_years>" years and "<retire_months>" months
@@ -41,5 +42,7 @@ Examples: Amounts
 
     Examples: Amounts
       | birth_year   |
-      | 1899         |
-      | 2021         |
+      | -1           |
+      |  0           |
+      |  1899        |
+      |  2022        |
